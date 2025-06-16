@@ -1,8 +1,17 @@
 {
   "name": "route-task-tailwind",
   "packageManager": "yarn@4.5.0",
+  "scripts": {
+    "dev": "concurrently --prefix-colors=\"red,blue\" \"yarn run server\" \"yarn run start-tailwind\"",
+    "server": "live-server",
+    "start-tailwind": "npx @tailwindcss/cli -i ./src/index.input.css -o ./build/index.output.css --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.10",
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
     "tailwindcss": "^4.1.10"
   }
 }
