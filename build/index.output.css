@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-cyan-900: oklch(39.8% 0.07 227.392);
     --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-600: oklch(44.6% 0.043 257.281);
@@ -17,6 +18,10 @@
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -24,6 +29,7 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
+    --radius-sm: 0.25rem;
     --radius-2xl: 1rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -177,6 +183,9 @@
   }
 }
 @layer utilities {
+  .relative {
+    position: relative;
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
@@ -245,6 +254,9 @@
   }
   .gap-\[1\.5rem\] {
     gap: 1.5rem;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -406,6 +418,216 @@
       color: var(--color-white);
     }
   }
+  .before\:absolute {
+    &::before {
+      content: var(--tw-content);
+      position: absolute;
+    }
+  }
+  .before\:-inset-0 {
+    &::before {
+      content: var(--tw-content);
+      inset: calc(var(--spacing) * -0);
+    }
+  }
+  .before\:-inset-\[50px\] {
+    &::before {
+      content: var(--tw-content);
+      inset: calc(50px * -1);
+    }
+  }
+  .before\:inset-0 {
+    &::before {
+      content: var(--tw-content);
+      inset: calc(var(--spacing) * 0);
+    }
+  }
+  .before\:-start-\[100\%\] {
+    &::before {
+      content: var(--tw-content);
+      inset-inline-start: calc(100% * -1);
+    }
+  }
+  .before\:start-0 {
+    &::before {
+      content: var(--tw-content);
+      inset-inline-start: calc(var(--spacing) * 0);
+    }
+  }
+  .before\:top-0 {
+    &::before {
+      content: var(--tw-content);
+      top: calc(var(--spacing) * 0);
+    }
+  }
+  .before\:bottom-0 {
+    &::before {
+      content: var(--tw-content);
+      bottom: calc(var(--spacing) * 0);
+    }
+  }
+  .before\:flex {
+    &::before {
+      content: var(--tw-content);
+      display: flex;
+    }
+  }
+  .before\:h-full {
+    &::before {
+      content: var(--tw-content);
+      height: 100%;
+    }
+  }
+  .before\:w-full {
+    &::before {
+      content: var(--tw-content);
+      width: 100%;
+    }
+  }
+  .before\:items-center {
+    &::before {
+      content: var(--tw-content);
+      align-items: center;
+    }
+  }
+  .before\:justify-center {
+    &::before {
+      content: var(--tw-content);
+      justify-content: center;
+    }
+  }
+  .before\:rounded-2xl {
+    &::before {
+      content: var(--tw-content);
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .before\:rounded-sm {
+    &::before {
+      content: var(--tw-content);
+      border-radius: var(--radius-sm);
+    }
+  }
+  .before\:bg-slate-200 {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-slate-200);
+    }
+  }
+  .before\:bg-slate-800 {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-slate-800);
+    }
+  }
+  .before\:bg-slate-900 {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-slate-900);
+    }
+  }
+  .before\:text-2xl {
+    &::before {
+      content: var(--tw-content);
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .before\:text-lg {
+    &::before {
+      content: var(--tw-content);
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .before\:text-sm {
+    &::before {
+      content: var(--tw-content);
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .before\:text-xl {
+    &::before {
+      content: var(--tw-content);
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .before\:text-white {
+    &::before {
+      content: var(--tw-content);
+      color: var(--color-white);
+    }
+  }
+  .before\:opacity-15 {
+    &::before {
+      content: var(--tw-content);
+      opacity: 15%;
+    }
+  }
+  .before\:opacity-25 {
+    &::before {
+      content: var(--tw-content);
+      opacity: 25%;
+    }
+  }
+  .before\:opacity-45 {
+    &::before {
+      content: var(--tw-content);
+      opacity: 45%;
+    }
+  }
+  .before\:opacity-65 {
+    &::before {
+      content: var(--tw-content);
+      opacity: 65%;
+    }
+  }
+  .before\:transition-\[inline-start\] {
+    &::before {
+      content: var(--tw-content);
+      transition-property: inline-start;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .before\:transition-\[inset-inline-start\] {
+    &::before {
+      content: var(--tw-content);
+      transition-property: inset-inline-start;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .before\:duration-700 {
+    &::before {
+      content: var(--tw-content);
+      --tw-duration: 700ms;
+      transition-duration: 700ms;
+    }
+  }
+  .before\:duration-\[0\.2s\] {
+    &::before {
+      content: var(--tw-content);
+      --tw-duration: 0.2s;
+      transition-duration: 0.2s;
+    }
+  }
+  .before\:content-\[\'\'\] {
+    &::before {
+      content: var(--tw-content);
+      --tw-content: '';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'Hello_there\!\'\] {
+    &::before {
+      content: var(--tw-content);
+      --tw-content: 'Hello there!';
+      content: var(--tw-content);
+    }
+  }
   .hover\:border-slate-400 {
     &:hover {
       @media (hover: hover) {
@@ -424,6 +646,16 @@
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:before\:start-0 {
+    &:hover {
+      @media (hover: hover) {
+        &::before {
+          content: var(--tw-content);
+          inset-inline-start: calc(var(--spacing) * 0);
+        }
       }
     }
   }
@@ -511,6 +743,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -532,6 +769,7 @@
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
       --tw-duration: initial;
+      --tw-content: "";
     }
   }
 }
