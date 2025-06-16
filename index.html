@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="selection:text-white selection:bg-slate-600">
 
 <head>
     <meta charset="UTF-8" />
@@ -18,8 +18,32 @@
     <link rel="stylesheet" href="./build/index.output.css">
 </head>
 
-<body>
-    
+<body class="min-h-lvh bg-slate-900 grid place-items-center">
+    <div class="max-w-[22rem] px-[1.25rem] py-[1.5rem] border-[1px] hover:border-slate-600 flex flex-col gap-[1.5rem] bg-slate-800 rounded-2xl shadow-2xl
+    transition-[border-color] duration-[0.7s]">
+        <div class="max-w-100">
+            <img src="./build/images/card.jpeg" alt="Just a picture for the card" class="w-100 rounded-2xl" />
+        </div>
+
+        <div class="pb-4 border-b-[1px] border-slate-700 flex flex-col gap-[0.75rem]">
+            <h1 class="text-white font-bold text-2xl">Equilibrium #3429</h1>
+
+            <p class="text-slate-400">
+                Our Equilibrium collection promotes balance and calm.
+            </p>
+        </div>
+
+        <div class="flex items-center gap-[0.5rem]">
+            <div class="w-[3rem] h-[3rem] border border-white rounded-full">
+                <img src="./build/images/person.jpeg" alt="Just a picture for the person"
+                    class="w-full h-full rounded-full object-cover" />
+            </div>
+
+            <h2 class="text-slate-400">
+                Creation of <span class="text-white">Jules Wyvern</span>
+            </h2>
+        </div>
+    </div>
 </body>
 
 </html>
