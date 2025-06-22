@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+    .u-card {
+        @apply rounded-md px-4 py-3 bg-emerald-800 dark:bg-neutral-300 dark:shadow-2xl text-white dark:text-black font-sans;
+    }
+}
+
+@layer utilities {
+    .u-container {
+        @apply container mx-auto px-[1.25rem];
+    }
+}
