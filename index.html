@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="selection:text-white selection:bg-slate-600">
+<html lang="en" dir="ltr"
+    class=" dark:selection:text-white dark:selection:bg-slate-600 selection:bg-slate-100 selection:text-black">
 
 <head>
     <meta charset="UTF-8" />
@@ -18,34 +19,49 @@
     <link rel="stylesheet" href="./build/index.output.css">
 </head>
 
-<body class="min-h-lvh bg-slate-900 grid place-items-center">
-    <div class="max-w-[22rem] px-[1.25rem] py-[1.5rem] border-[1px] hover:border-slate-600 flex flex-col gap-[1.5rem] bg-slate-800 rounded-2xl shadow-2xl
-    transition-[border-color] duration-[0.7s]">
-        <div class="max-w-100 relative overflow-hidden hover:before:start-0 before:content-['Hello_there!'] before:text-2xl 
-        before:flex before:justify-center before:items-center before:text-white before:w-full before:h-full before:rounded-2xl before:absolute 
-        before:-start-[100%] before:top-0 before:bottom-0s before:bg-slate-900 before:opacity-65 before:duration-[0.2s] before:transition-[inset-inline-start]">
-            <img src="./build/images/card.jpeg" alt="Just a picture for the card" class="w-100 rounded-2xl" />
+<body class="min-h-lvh bg-white dark:bg-slate-900 grid place-items-center">
+
+    <label for="switch" class="inline-flex items-center cursor-pointer">
+        <input id="switch" type="checkbox" value="" class="sr-only peer">
+
+        <div
+            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600">
         </div>
 
-        <div class="pb-4 border-b-[1px] border-slate-700 flex flex-col gap-[0.75rem]">
-            <h1 class="text-white font-bold text-2xl">Equilibrium #3429</h1>
+        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Switch to dark and light</span>
+    </label>
 
-            <p class="text-slate-400">
-                Our Equilibrium collection promotes balance and calm.
-            </p>
-        </div>
 
-        <div class="flex items-center gap-[0.5rem]">
-            <div class="w-[3rem] h-[3rem] border border-white rounded-full">
-                <img src="./build/images/person.jpeg" alt="Just a picture for the person"
-                    class="w-full h-full rounded-full object-cover" />
+    <div class="u-container">
+        <div class="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-[1.25rem]">
+            <div class="u-card">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officia corporis repudiandae nisi,
+                    animi amet.</p>
             </div>
 
-            <h2 class="text-slate-400">
-                Creation of <span class="text-white">Jules Wyvern</span>
-            </h2>
+            <div class="u-card">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officia corporis repudiandae nisi,
+                    animi amet.</p>
+            </div>
+
+            <div class="u-card">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officia corporis repudiandae nisi,
+                    animi amet.</p>
+            </div>
+
+            <div class="u-card">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officia corporis repudiandae nisi,
+                    animi amet.</p>
+            </div>
+
+            <div class="u-card">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officia corporis repudiandae nisi,
+                    animi amet.</p>
+            </div>
         </div>
     </div>
+
+    <script src="./src/index.js"></script>
 </body>
 
 </html>
